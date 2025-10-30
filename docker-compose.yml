@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   app_blue:
+    build: .
     image: ${BLUE_IMAGE}
     container_name: app_blue
     ports:
@@ -19,6 +20,7 @@ services:
       retries: 3
 
   app_green:
+    build: .
     image: ${GREEN_IMAGE}
     container_name: app_green
     ports:
@@ -56,3 +58,4 @@ services:
 networks:
   app_network:
     driver: bridge
+
