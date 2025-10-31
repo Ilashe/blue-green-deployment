@@ -48,7 +48,10 @@ chmod +x nginx/entrypoint.sh
 **STEP 9 : Deploy the Application
 **Start all services
 
-docker-compose up -d
+sudo docker-compose down
+sudo docker-compose build --no-cache
+sudo docker-compose up -d
+
 
 # Check if containers are running
 docker-compose ps
